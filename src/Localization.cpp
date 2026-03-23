@@ -1,4 +1,5 @@
 #include "mpc_rbt_simulator/RobotConfig.hpp"
+#include "Localization.hpp"
 
 LocalizationNode::LocalizationNode() : 
     rclcpp::Node("localization_node"), 
