@@ -30,6 +30,7 @@ include_directories(PUBLIC
 set(dependencies
         rclcpp
         rclcpp_action
+        geometry_msgs # change here
         sensor_msgs
         nav_msgs
         nav2_msgs
@@ -58,6 +59,9 @@ install(TARGETS keyboard_control DESTINATION lib/${PROJECT_NAME})
 # * * * * * * * * * * * * * * * * *
 # *      Lab 05_localization
 # * * * * * * * * * * * * * * * * *
+add_executable(localization src/localization_node.cpp)
+target_link_libraries(localization ${PROJECT_NAME})
+install(TARGETS localization DESTINATION lib/${PROJECT_NAME})
 
 # * * * * * * * * * * * * * * * * *
 # *      Lab 06_planning
